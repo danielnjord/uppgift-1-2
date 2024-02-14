@@ -52,8 +52,7 @@ namespace uppgift_1_2
         {
             // sparar namnen i en txt fil på denna plats
             string directoryPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "FilteredNames");
-
-
+            
             Directory.CreateDirectory(directoryPath);
 
             string filePath = Path.Combine(directoryPath, $"NamesStartingWith{letter}.txt");
@@ -61,7 +60,6 @@ namespace uppgift_1_2
             File.WriteAllLines(filePath, list);
 
             Console.WriteLine($"Filtrerade namn som börjar med bokstaven '{letter}' har sparats i filen: {filePath}");
-
         }
     }
 }
